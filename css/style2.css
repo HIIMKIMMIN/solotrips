@@ -1,0 +1,222 @@
+@charset "urf-8";
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+html{font-size: 16px;}
+*{margin: 0; padding: 0;}
+li{list-style-type: none;}
+a{text-decoration: none; color: #000;}
+body{color: rgba(0, 0, 0, 0.8); font-weight: 500; font-family: "Noto Sans KR", sans-serif;}
+/* header */
+.wrap{
+    margin: 0 auto;
+    width: 70%;
+}
+header{
+    /* padding: 2em 0; */
+    text-align: center;
+    position: relative;
+}
+header h1{
+    font-family: "Peralta", serif;
+    color: #B5AC49;
+    font-size: 3rem;
+    padding: 1em 0;
+}
+/* nav */
+nav .gnb{
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 5em;
+}
+nav .gnb li a{
+    font-size: 1.1rem;
+    font-weight:400;
+}
+/* btn_moblie */
+header .btn_moblie{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #B5AC49;
+    position: absolute;
+    top: 60px; right: 0;
+}
+header .btn_moblie span{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+header .btn_moblie span:nth-child(1){
+    top: 70%; right: 10%;
+    width: 36px; height: 3px;
+}
+header .btn_moblie span:nth-child(2){
+    top: 50%; right: 10%;
+    width: 28px; height: 3px;
+}
+header .btn_moblie span:nth-child(3){
+    top: 30%; right: 10%;
+    width: 22px; height: 3px;
+}
+header .btn_moblie:hover span:nth-child(3){
+    width: 36px; height: 3px;
+}
+header .btn_moblie:hover span:nth-child(2){
+    width: 36px; height: 3px;
+}
+
+.wrap > figure{
+    background: url(../img/travel.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 30em;
+    position: relative;
+    border-top: 4px solid #B5AC49;
+    border-bottom: 4px solid #B5AC49;
+}
+.wrap > figure .title{
+    width: 40%;
+    position: absolute;  
+    left: 5%; top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.wrap > figure .title p{
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+
+/* :start */
+/* .inner {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+} */
+/* cont_wrap */
+#cont_wrap{
+    margin-top: 3em;
+}
+#cont_wrap .cont_top> div{
+    background-color:#b5ac4927;
+    margin: 5px;
+    padding: 10px;
+}
+#cont_wrap h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 25px;
+}
+#cont_wrap img {
+    max-width: 100%;
+}
+#cont_wrap .text {
+    line-height: 1.6;
+    word-break: keep-all;
+    margin-bottom: 15px;
+}
+
+#cont_wrap .cont_top {
+    display: flex;
+    justify-content: space-between;
+}
+.cont_top .intro {width: 35%}
+.cont_top .hot_place {width: 32%}
+.cont_top .hot_place figure {margin-bottom: 15px;}
+.cont_top .hot_place .text_area strong {
+    display:block;
+    color: brown;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    border-left: 3px solid rgb(88, 23, 23);
+    padding-left: 5px;
+}
+.cont_top aside {width: 25%}
+.cont_wrap .cont_bottom{
+    margin-bottom: 30px;
+}
+aside{
+    background-color:#b5ac4927;
+}
+aside figure{
+    background: url(../img/airplane.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 10em;
+    margin-bottom: 2em;
+}
+.cont_bottom{
+    margin-top: 5em;
+    background-color:#b5ac4927;
+}
+.cont_bottom .event_area{
+    display: flex;
+    justify-content: space-between;
+}
+.event_area .event_text{
+    margin-top: 2em;
+    width: 46%; 
+}
+.event_area .event_text .title{
+    color: #000;
+    font-size: 1.25em;
+}
+.event_area .event_text .desc{
+    margin-top: 1em;
+}
+footer{
+    border-top: 0.3em solid rgba(0, 0, 0, 0.2) ;
+    height: 5em;
+    line-height: 5em;
+    text-align: center;
+    margin-top: 4em;
+}
+
+@media screen and (max-width:600px){
+    nav .gnb{
+        display: flex;
+        flex-direction: column;
+        height: 20em;
+    }
+    .wrap{
+        margin: 0 auto;
+        width: 100%;
+    }
+    header .btn_moblie{
+        display: block;
+    }
+    .wrap header nav{
+        display: flex;
+        flex-direction: column;
+
+        background: #fff;
+    }
+    .wrap header nav .gnb li{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    #cont_wrap .cont_top {
+        display: block
+    }
+    .cont_top .intro {width: 100%}
+    .cont_top .hot_place {width: 100%}
+    .cont_top .hot_place figure {margin-bottom: 0px;}
+    .cont_bottom{margin-top: 0;}
+    .cont_bottom .event_area{
+        display: block;
+        width: 100%;
+    }
+    .event_area .event_text{
+        margin-top: 0;
+        width: 100%; 
+    }
+    .cont_top aside {width: 100%;}
+    aside figure{
+        background: url(../img/airplane.jpg) no-repeat center/cover;
+        width: 100%;
+        height: 10em;
+        margin-bottom: 2em;
+    }
+}
